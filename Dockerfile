@@ -19,7 +19,7 @@ RUN chown jarvis /home/jarvis/.profile
 USER jarvis
 WORKDIR /home/jarvis
 RUN echo n | yo hubot --defaults
-RUN npm install hubot-slack hubot-scripts githubot --save
+RUN npm install hubot-slack hubot-scripts githubot hubot-giphy-gifme --save
 
 # enable plugins
 RUN echo [] > hubot-scripts.json
