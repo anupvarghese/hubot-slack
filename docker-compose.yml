@@ -1,7 +1,9 @@
 web:
   build: .
-  command: "/home/jarvis/bin/hubot --name jarvis"
+  command: "/home/jarvis/bin/hubot -a slack --name jarvis"
   ports:
     - "3001:3000"
   environment:
     HUBOT_SLACK_TOKEN: slack_token
+    HUBOT_GOOGLE_CSE_ID: googlecseid
+    HUBOT_GOOGLE_CSE_KEY: googlecsekey
