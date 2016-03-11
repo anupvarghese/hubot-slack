@@ -17,7 +17,7 @@ ENV HOME /home/jarvis
 RUN chown jarvis /home/jarvis/.profile
 
 USER jarvis
-WORDIR /home/jarvis
+WORKDIR /home/jarvis
 RUN echo n | yo hubot --defaults
 RUN npm install hubot-slack hubot-scripts githubot --save
 
