@@ -1,4 +1,10 @@
-FROM dockerfile/nodejs
+FROM node:0.10.38
+
+RUN apt-get update -qq && apt-get install -y \
+      git \
+      && apt-get clean \
+      && rm -rf /var/lib/apt/lists/*
+
 MAINTAINER  Anoop Varghese anoop@metaboard.io
 
 WORKDIR /root
