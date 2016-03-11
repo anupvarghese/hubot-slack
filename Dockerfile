@@ -24,7 +24,7 @@ RUN npm install hubot-slack hubot-scripts githubot hubot-giphy-gifme --save
 # enable plugins
 RUN echo [] > hubot-scripts.json
 RUN echo [  > external-scripts.json
-RUN echo '["hubot-diagnostics",\n"hubot-help",\n"hubot-pugme",\n"hubot-rules",\n"hubot-shipit",\n"hubot-giphy-gifme"'\n]' > external-scripts.json
+RUN echo "[\"hubot-diagnostics\",\n\"hubot-help\",\n\"hubot-pugme\",\n\"hubot-rules\",\n\"hubot-shipit\",\n\"hubot-giphy-gifme\"'\n]" > external-scripts.json
 
 CMD ["/home/jarvis/bin/hubot", "--name", "jarvis"]
 
