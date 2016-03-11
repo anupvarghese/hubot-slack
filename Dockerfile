@@ -22,7 +22,9 @@ RUN echo n | yo hubot --defaults
 RUN npm install hubot-slack hubot-scripts githubot --save
 
 # enable plugins
-RUN echo [ \'github-merge.coffee\' ] > hubot-scripts.json
+RUN echo [] > hubot-scripts.json
+RUN grep -v "heroku" external-scripts.json > temp; mv temp external-scripts.json
+RUN grep -v "redis" external-scripts.json > temp; mv temp external-scripts.json
 
 CMD ["/home/jarvis/bin/hubot", "--name", "jarvis"]
 
